@@ -1,19 +1,18 @@
+/* src/components/AlphabetNavigator.css */
 .alphabet-navigator {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     padding: 10px;
   }
   
   .letter {
+    color: var(--dark-gray);
     padding: 5px;
     cursor: pointer;
-    border: none;
-    background: none;
   }
   
   .letter.active {
-    border: 2px solid blue; /* o cualquier estilo que prefieras para el indicador activo */
-    padding: 3px;
+    background-color: var(--medium-gray);
+    color: var(--lightest-gray);
   }
   

@@ -1,7 +1,18 @@
-.contact-image {
-    width: 50px;  /* or any size that fits your design */
+.contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Asegura que los elementos estén espaciados uniformemente */
+  }
+  
+  .contact-item {
+    width: 30%; /* Cada elemento tiene aproximadamente un tercio del ancho total, ajusta según necesidades */
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Espacio entre filas */
+  }
+  
+  .contact-image {
+    width: 50px; /* Asegura que la imagen ocupe todo el ancho del contenedor .contact-item */
     height: 50px;
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image covers the set dimensions */
+    border-radius: 50%; /* Hace la imagen circular */
   }
   

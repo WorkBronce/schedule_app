@@ -1,11 +1,46 @@
+/* src/components/Header.css */
 .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #f5f5f5;
+  
+    align-items: center;
+    gap: 10px;
+    background-color: var(--lightest-gray);
+    color: var(--darkest-gray);
+    border: 2px solid var(--darkest-gray);
   }
   
-  .header button {
-    margin-right: 10px;
+  .header button, .header img {
+    filter: grayscale(100%); /* Si quieres mantener todo en escala de grises */
+    cursor: pointer;
+  }
+  
+  .header input {
+    border: 3px solid var(--medium-gray);
+    background-color: var(--lightest-gray);
+    color: var(--darkest-gray);
+  }
+  
+/* Estilo para el botón de añadir usuario */
+.add-user-btn {
+    background-color: var(--medium-gray);  /* Fondo medio gris */
+    color: var(--lightest-gray);           /* Texto en gris claro */
+    border: none;                          /* Sin borde */
+    padding: 10px 15px;                    /* Padding para mejor manejo */
+    border-radius: 5px;                    /* Bordes redondeados */
+    cursor: pointer;                       /* Cursor tipo puntero */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave al interactuar */
+    border: 4px solid var(--dark-gray);    /* Borde de 2px sólido en gris oscuro */
+    align-items: center;
+  }
+  
+  /* Estilo para el hover y focus del botón */
+  .add-user-btn:hover, .add-user-btn:focus {
+    background-color: var(--dark-gray);    /* Oscurecer el fondo al pasar el mouse */
+    color: var(--darkest-gray);            /* Texto casi negro para contraste */
+  }
+  
+  /* Estilo para el active del botón */
+  .add-user-btn:active {
+    background-color: var(--darkest-gray); /* Fondo muy oscuro cuando se hace clic */
+    color: var(--medium-gray);             /* Texto en medio gris para visibilidad */
   }
   

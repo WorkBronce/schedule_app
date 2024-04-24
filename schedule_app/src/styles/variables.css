@@ -1,0 +1,11 @@
+/* src/styles/variables.css */
+
+:root {
+    --lightest-gray: #F2EFE9; /* Diseño-gráfico-1 */
+    --light-gray: #D9D6D0;    /* Diseño-gráfico-2 */
+    --medium-gray: #A6A39F;   /* Diseño-gráfico-3 */
+    --dark-gray: #403F3D;     /* Diseño-gráfico-4 */
+    --darkest-gray: #0D0D0D;  /* Diseño-gráfico-5 */
+    
+  }
+  
