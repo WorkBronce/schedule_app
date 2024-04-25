@@ -36,7 +36,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header onAddClick={() => console.log('Agregar Contacto')} />
+      <div className="top-bar">
+        <Header onAddClick={() => console.log('Add Contact')} />
+      </div>
       <div className="content">
         <AlphabetNavigator activeLetter={activeLetter} onLetterClick={handleLetterClick} />
         <ContactList contacts={contacts} />

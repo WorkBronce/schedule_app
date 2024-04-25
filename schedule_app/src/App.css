@@ -1,36 +1,38 @@
+
+body {
+  background-color: var(--light-gray);
+}
+
 .icon {
   width: 32px;
   height: 32px;
 }
 
-.button {
-  background-image: url('./images/search.png'); /* Adjust path as necessary */
-  background-size: cover;
-  width: 50px;  /* Or any other dimensions */
-  height: 50px;
-  border: none;
-  cursor: pointer;
+.container {
+  display: flex;
+  flex-direction: column; /* Cambio de horizontal a vertical */
+  height: 100vh;
+  align-items: center; /* Centrar elementos horizontalmente */
+  justify-content: flex-start; /* Alinea los elementos desde el comienzo verticalmente */
 }
 
-.container {
-  display: flex; /* Establece Flexbox */
-  align-items: flex-start; /* Alinea los elementos al comienzo del contenedor */
-  height: 100vh; /* Opción para tomar toda la altura de la pantalla */
+.top-bar {
+  width: 100%; /* Toma todo el ancho posible */
+  display: flex;
+  justify-content: center; /* Centra los botones en la barra superior */
+  padding: 10px 0; /* Espaciado vertical sin afectar horizontal */
+}
+
+.content {
+  display: flex;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: calc(100% - 60px); /* Ajusta el alto considerando el de la barra superior */
 }
 
 .alphabet-navigator {
-  width: fit-content; /* Asigna un ancho fijo o proporcional al navegador alfabético */
-  padding: 10px;
-  box-sizing: border-box;
+  width: fit-content; /* Ancho fijo para el navegador alfabético */
+  height: 100%; /* Ocupa todo el alto disponible del contenedor de contenido */
 }
 
-.contact-list {
-  flex-grow: 1; /* Permite que la lista de contactos ocupe el espacio restante */
-  padding: 10px;
-  box-sizing: border-box;
-}
 
-/*Background color of app*/
-body {
-  background-color: var(--medium-gray);
-}
+

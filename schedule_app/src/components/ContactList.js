@@ -8,7 +8,7 @@ function ContactList({ contacts }) {
       {contacts.map(contact => (
         <div key={contact.id} className="contact-item">
           {/* Utiliza la imagen de perfil del contacto si está disponible, si no, usa userIcon */}
-          <img src={ userIcon} alt={contact.nombre} className="contact-image" />
+          <img src={userIcon} alt={contact.nombre} className="contact-image" />
           <p>{contact.nombre} {contact.apellidos}</p>
         </div>
       ))}

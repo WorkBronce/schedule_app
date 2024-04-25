@@ -1,14 +1,10 @@
 /* src/components/AlphabetNavigator.css */
-.alphabet-navigator {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-  }
-  
+
   .letter {
     color: var(--dark-gray);
     padding: 5px;
     cursor: pointer;
+    width: fit-content;
   }
   
   .letter.active {

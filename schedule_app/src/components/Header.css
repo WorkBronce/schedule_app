@@ -1,46 +1,64 @@
 /* src/components/Header.css */
 .header {
-  
+    display: flex;
     align-items: center;
     gap: 10px;
-    background-color: var(--lightest-gray);
     color: var(--darkest-gray);
-    border: 2px solid var(--darkest-gray);
   }
   
-  .header button, .header img {
-    filter: grayscale(100%); /* Si quieres mantener todo en escala de grises */
+  .header button, .header img, .header input {
+    filter: grayscale(100%); /* Efecto de escala de grises para todos los elementos */
     cursor: pointer;
+  }
+  
+  .header img {
+    width: 32px;
+    height: 32px;
   }
   
   .header input {
     border: 3px solid var(--medium-gray);
     background-color: var(--lightest-gray);
     color: var(--darkest-gray);
+    padding: 5px 10px; /* Consistencia en el padding */
+    border-radius: 5px; /* Bordes redondeados para input */
+  }
+
+  
+/* Add this updated style to your component-specific CSS or a global stylesheet */
+.button-74 {
+    background-color: var(--lightest-gray); /* Lightest gray for the button background */
+    border: 2px solid var(--darkest-gray); /* Darkest gray for the border */
+    border-radius: 30px;
+    box-shadow: var(--darkest-gray) 4px 4px 0 0; /* Darkest gray for the shadow */
+    color: var(--darkest-gray); /* Text color */
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
   }
   
-/* Estilo para el botón de añadir usuario */
-.add-user-btn {
-    background-color: var(--medium-gray);  /* Fondo medio gris */
-    color: var(--lightest-gray);           /* Texto en gris claro */
-    border: none;                          /* Sin borde */
-    padding: 10px 15px;                    /* Padding para mejor manejo */
-    border-radius: 5px;                    /* Bordes redondeados */
-    cursor: pointer;                       /* Cursor tipo puntero */
-    transition: background-color 0.3s, color 0.3s; /* Transición suave al interactuar */
-    border: 4px solid var(--dark-gray);    /* Borde de 2px sólido en gris oscuro */
-    align-items: center;
+  .button-74:hover {
+    background-color: var(--light-gray); /* Slightly darker gray on hover */
   }
   
-  /* Estilo para el hover y focus del botón */
-  .add-user-btn:hover, .add-user-btn:focus {
-    background-color: var(--dark-gray);    /* Oscurecer el fondo al pasar el mouse */
-    color: var(--darkest-gray);            /* Texto casi negro para contraste */
+  .button-74:active {
+    box-shadow: var(--darkest-gray) 2px 2px 0 0; /* Smaller shadow to give a pressed effect */
+    transform: translate(2px, 2px);
   }
   
-  /* Estilo para el active del botón */
-  .add-user-btn:active {
-    background-color: var(--darkest-gray); /* Fondo muy oscuro cuando se hace clic */
-    color: var(--medium-gray);             /* Texto en medio gris para visibilidad */
+  @media (min-width: 768px) {
+    .button-74 {
+      min-width: 120px;
+      padding: 0 25px;
+    }
   }
+  
   
