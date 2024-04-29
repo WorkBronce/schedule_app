@@ -14,21 +14,30 @@ function App() {
   }, [activeLetter]);
 
   const filterContactsByLetter = (letter) => {
-    const filtered = contactsData.filter(contact =>
-      contact.nombre.toUpperCase().startsWith(letter)
-    );
+    const index = letter.charCodeAt(0) - 'A'.charCodeAt(0);
+    let filtered = [];
 
-    if (filtered.length < 3) {
-      const startIndex = contactsData.findIndex(contact => contact.nombre.toUpperCase().startsWith(letter));
-      const endIndex = startIndex + 3;  // Intentamos obtener al menos tres contactos comenzando desde el índice inicial
-      const additionalContacts = contactsData.slice(startIndex, endIndex).filter(contact => 
-        !contact.nombre.toUpperCase().startsWith(letter)
-      );
-      setContacts([...filtered, ...additionalContacts].slice(0, 3));  // Limitamos a tres contactos exactamente
-    } else {
-      setContacts(filtered.slice(0, 3));
+    if (index >= 24) {  // If the letter is Y or Z, fetch previous contacts in reverse order
+        for (let i = index; i >= 0 && filtered.length < 3; i--) {
+            filtered.push(...contactsData.filter(contact => 
+                contact.nombre.toUpperCase().startsWith(String.fromCharCode('A'.charCodeAt(0) + i))
+            ));
+        }
+    } else {  // Otherwise, fetch next contacts in forward order
+        for (let i = index; i < 26 && filtered.length < 3; i++) {
+            filtered.push(...contactsData.filter(contact => 
+                contact.nombre.toUpperCase().startsWith(String.fromCharCode('A'.charCodeAt(0) + i))
+            ));
+        }
     }
-  };
+
+    // Sort the filtered contacts alphabetically
+    filtered.sort((a, b) => a.nombre.localeCompare(b.nombre));
+
+    // Ensure the list has exactly up to three contacts
+    setContacts(filtered.slice(0, 3));
+};
+
 
   const handleLetterClick = letter => {
     setActiveLetter(letter);
