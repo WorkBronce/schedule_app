@@ -1,15 +1,10 @@
-.add-contact-form {
+
+.contact-details {
     display: flex;
     flex-direction: column;
-    margin: 20px;
-}
-
-.add-contact-form input {
-    margin: 10px 0;
-    padding: 8px;
-    font-size: 16px;
-}
-
+    align-items: center;
+    text-align: center;
+  }
 .icons {
     display: flex;
     justify-content: space-between;
@@ -21,7 +16,14 @@
     cursor: pointer; /* If the icons are interactive */
 }
 
-button.AddContact {
+.Options{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    border: none;
+}
+
+.Edit {
     padding: 10px;
     font-size: 16px;
     background-color: #4CAF50;

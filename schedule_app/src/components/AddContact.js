@@ -105,7 +105,7 @@ const AddContact = ({ onSave, contactsData }) => {
                 <img src={checkListIcon} alt="Checklist Icon" />
             </div>
             {error && <p style={{ color: 'red' }}>{error}</p>}
-            <button onClick={handleSave}>Save Contact</button>
+            <button className='AddContact' onClick={handleSave}>Save Contact</button>
         </div>
     );
 };
