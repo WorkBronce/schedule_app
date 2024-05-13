@@ -1,58 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import Header from './components/Header';
-import AlphabetNavigator from './components/AlphabetNavigator';
-import ContactList from './components/ContactList';
-import contactsData from './contacts.json';
-import './App.css';
+import React, { useState } from 'react';
+import AddContact from './components/AddContact';
+import MainScreen from './components/MainScreen'; // Your existing components
+import contactsData from '../src/data/contacts.json'; // Your contacts data
 
 function App() {
-  const [activeLetter, setActiveLetter] = useState('A');
-  const [contacts, setContacts] = useState([]);
+  const [addingContact, setAddingContact] = useState(false);
 
-  useEffect(() => {
-    filterContactsByLetter(activeLetter);
-  }, [activeLetter]);
-
-  const filterContactsByLetter = (letter) => {
-    const index = letter.charCodeAt(0) - 'A'.charCodeAt(0);
-    let filtered = [];
-
-    if (index >= 24) {  // If the letter is Y or Z, fetch previous contacts in reverse order
-        for (let i = index; i >= 0 && filtered.length < 3; i--) {
-            filtered.push(...contactsData.filter(contact => 
-                contact.nombre.toUpperCase().startsWith(String.fromCharCode('A'.charCodeAt(0) + i))
-            ));
-        }
-    } else {  // Otherwise, fetch next contacts in forward order
-        for (let i = index; i < 26 && filtered.length < 3; i++) {
-            filtered.push(...contactsData.filter(contact => 
-                contact.nombre.toUpperCase().startsWith(String.fromCharCode('A'.charCodeAt(0) + i))
-            ));
-        }
-    }
-
-    // Sort the filtered contacts alphabetically
-    filtered.sort((a, b) => a.nombre.localeCompare(b.nombre));
-
-    // Ensure the list has exactly up to three contacts
-    setContacts(filtered.slice(0, 3));
-};
-
-
-  const handleLetterClick = letter => {
-    setActiveLetter(letter);
+  const handleAddContact = () => {
+    setAddingContact(true);
   };
 
+  const saveContact = (contact) => {
+    // Logic to save the contact...
+    console.log(contact);
+    setAddingContact(false);
+  };
+
+  if (addingContact) {
+    return (
+      <AddContact onSave={saveContact} contactsData={contactsData} />
+    );
+  }
+
   return (
-    <div className="App">
-      <div className="top-bar">
-        <Header onAddClick={() => console.log('Add Contact')} />
-      </div>
-      <div className="content">
-        <AlphabetNavigator activeLetter={activeLetter} onLetterClick={handleLetterClick} />
-        <ContactList contacts={contacts} />
-      </div>
-    </div>
+    <MainScreen onAddContact={handleAddContact} />
   );
 }
 

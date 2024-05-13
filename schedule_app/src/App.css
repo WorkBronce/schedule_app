@@ -32,6 +32,8 @@ body {
 .alphabet-navigator {
   width: fit-content; /* Ancho fijo para el navegador alfabético */
   height: 100%; /* Ocupa todo el alto disponible del contenedor de contenido */
+  overflow: auto; /* Agrega scroll si el contenido excede el alto */
+  text-size-adjust: calc(100% - 10px); /* Ajusta el tamaño del texto */
 }
 
 

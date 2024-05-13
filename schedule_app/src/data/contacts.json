@@ -1,0 +1,262 @@
+[
+    {
+        "id": 1,
+        "name": "Alice",
+        "surname": "Anderson",
+        "image": "/images/alice.jpg",
+        "relationship": "amistad",
+        "phone": "123-456-7890",
+        "email": "alice.anderson@example.com",
+        "address": "123 Maple Street, Anytown, CA, 12345"
+    },
+    {
+        "id": 2,
+        "name": "Bob",
+        "surname": "Baker",
+        "image": "/images/bob.jpg",
+        "relationship": "trabajo",
+        "phone": "987-654-3210",
+        "email": "bob.baker@example.com",
+        "address": "456 Oak Avenue, Anycity, NY, 54321"
+    },
+    {
+        "id": 3,
+        "name": "Carlos",
+        "surname": "Clark",
+        "image": "/images/carlos.jpg",
+        "relationship": "familia",
+        "phone": "555-123-4567",
+        "email": "carlos.clark@example.com",
+        "address": "789 Pine Road, Anyville, TX, 67890"
+    },
+    {
+        "id": 4,
+        "name": "Diana",
+        "surname": "Diaz",
+        "image": "/images/diana.jpg",
+        "relationship": "amistad",
+        "phone": "111-222-3333",
+        "email": "diana.diaz@example.com",
+        "address": "321 Cedar Blvd, Anyburg, FL, 98765"
+    },
+    {
+        "id": 5,
+        "name": "Evan",
+        "surname": "Ellis",
+        "image": "/images/evan.jpg",
+        "relationship": "trabajo",
+        "phone": "666-777-8888",
+        "email": "evan.ellis@example.com",
+        "address": "654 Spruce St, Anyplace, WA, 65432"
+    },
+    {
+        "id": 6,
+        "name": "Fiona",
+        "surname": "Foster",
+        "image": "/images/fiona.jpg",
+        "relationship": "familia",
+        "phone": "222-333-4444",
+        "email": "fiona.foster@example.com",
+        "address": "987 Elm Street, Anywhere, IL, 32198"
+    },
+    {
+        "id": 7,
+        "name": "George",
+        "surname": "Gonzalez",
+        "image": "/images/george.jpg",
+        "relationship": "amistad",
+        "phone": "123-987-6543",
+        "email": "george.gonzalez@example.com",
+        "address": "369 Birch Lane, Anytown, CO, 12398"
+    },
+    {
+        "id": 8,
+        "name": "Hannah",
+        "surname": "Hill",
+        "image": "/images/hannah.jpg",
+        "relationship": "trabajo",
+        "phone": "321-654-9870",
+        "email": "hannah.hill@example.com",
+        "address": "852 Palm Road, Anycity, VA, 87654"
+    },
+    {
+        "id": 9,
+        "name": "Ian",
+        "surname": "Irwin",
+        "image": "/images/ian.jpg",
+        "relationship": "familia",
+        "phone": "456-321-9876",
+        "email": "ian.irwin@example.com",
+        "address": "147 Maple Ave, Anyville, MT, 75641"
+    },
+    {
+        "id": 10,
+        "name": "Julia",
+        "surname": "Jensen",
+        "image": "/images/julia.jpg",
+        "relationship": "amistad",
+        "phone": "567-890-1234",
+        "email": "julia.jensen@example.com",
+        "address": "235 Cherry Court, Anytown, AK, 98765"
+    },
+    {
+        "id": 11,
+        "name": "Kevin",
+        "surname": "Knight",
+        "image": "/images/kevin.jpg",
+        "relationship": "trabajo",
+        "phone": "890-567-1234",
+        "email": "kevin.knight@example.com",
+        "address": "482 Sixth Street, Anycity, SD, 54678"
+    },
+    {
+        "id": 12,
+        "name": "Laura",
+        "surname": "Lawson",
+        "image": "/images/laura.jpg",
+        "relationship": "familia",
+        "phone": "234-567-8910",
+        "email": "laura.lawson@example.com",
+        "address": "789 Cedar Path, Anyville, NH, 12354"
+    },
+    {
+        "id": 13,
+        "name": "Mike",
+        "surname": "Morris",
+        "image": "/images/mike.jpg",
+        "relationship": "amistad",
+        "phone": "345-678-9012",
+        "email": "mike.morris@example.com",
+        "address": "321 Pine Street, Anyburg, NV, 34567"
+    },
+    {
+        "id": 14,
+        "name": "Nina",
+        "surname": "Norton",
+        "image": "/images/nina.jpg",
+        "relationship": "trabajo",
+        "phone": "456-789-0123",
+        "email": "nina.norton@example.com",
+        "address": "654 Oak Lane, Anyplace, MI, 76543"
+    },
+    {
+        "id": 15,
+        "name": "Oscar",
+        "surname": "Olsen",
+        "image": "/images/oscar.jpg",
+        "relationship": "familia",
+        "phone": "567-890-1234",
+        "email": "oscar.olsen@example.com",
+        "address": "987 Spruce Road, Anywhere, AL, 98765"
+    },
+    {
+        "id": 16,
+        "name": "Paula",
+        "surname": "Patterson",
+        "image": "/images/paula.jpg",
+        "relationship": "amistad",
+        "phone": "678-901-2345",
+        "email": "paula.patterson@example.com",
+        "address": "369 Maple Drive, Anytown, KS, 87654"
+    },
+    {
+        "id": 17,
+        "name": "Quincy",
+        "surname": "Quinn",
+        "image": "/images/quincy.jpg",
+        "relationship": "trabajo",
+        "phone": "789-012-3456",
+        "email": "quincy.quinn@example.com",
+        "address": "852 Birch Street, Anycity, VT, 76543"
+    },
+    {
+        "id": 18,
+        "name": "Rachel",
+        "surname": "Ross",
+        "image": "/images/rachel.jpg",
+        "relationship": "familia",
+        "phone": "890-123-4567",
+        "email": "rachel.ross@example.com",
+        "address": "147 Cedar Blvd, Anyville, NM, 65432"
+    },
+    {
+        "id": 19,
+        "name": "Steven",
+        "surname": "Smith",
+        "image": "/images/steven.jpg",
+        "relationship": "amistad",
+        "phone": "901-234-5678",
+        "email": "steven.smith@example.com",
+        "address": "654 Pine Road, Anyburg, MS, 54321"
+    },
+    {
+        "id": 20,
+        "name": "Tina",
+        "surname": "Turner",
+        "image": "/images/tina.jpg",
+        "relationship": "trabajo",
+        "phone": "012-345-6789",
+        "email": "tina.turner@example.com",
+        "address": "812 Walnut Street, Anytown, CO, 81234"
+      },
+      {
+        "id": 21,
+        "name": "Ulysses",
+        "surname": "Underwood",
+        "image": "/images/ulysses.jpg",
+        "relationship": "familia",
+        "phone": "123-456-7890",
+        "email": "ulysses.underwood@example.com",
+        "address": "963 Oak Avenue, Anycity, FL, 96321"
+      },
+      {
+        "id": 22,
+        "name": "Victoria",
+        "surname": "Vance",
+        "image": "/images/victoria.jpg",
+        "relationship": "amistad",
+        "phone": "234-567-8901",
+        "email": "victoria.vance@example.com",
+        "address": "741 Pine Lane, Anyville, MT, 74185"
+      },
+      {
+        "id": 23,
+        "name": "William",
+        "surname": "Wright",
+        "image": "/images/william.jpg",
+        "relationship": "trabajo",
+        "phone": "345-678-9012",
+        "email": "william.wright@example.com",
+        "address": "852 Maple Drive, Anyburg, TX, 85274"
+      },
+      {
+        "id": 24,
+        "name": "Xavier",
+        "surname": "Xiong",
+        "image": "/images/xavier.jpg",
+        "relationship": "familia",
+        "phone": "456-789-0123",
+        "email": "xavier.xiong@example.com",
+        "address": "369 Cedar Blvd, Anywhere, NV, 36952"
+      },
+      {
+        "id": 25,
+        "name": "Yolanda",
+        "surname": "Young",
+        "image": "/images/yolanda.jpg",
+        "relationship": "amistad",
+        "phone": "567-890-1234",
+        "email": "yolanda.young@example.com",
+        "address": "147 Birch Street, Anyplace, OH, 14796"
+      },
+      {
+        "id": 26,
+        "name": "Zachary",
+        "surname": "Zimmerman",
+        "image": "/images/zachary.jpg",
+        "relationship": "trabajo",
+        "phone": "678-901-2345",
+        "email": "zachary.zimmerman@example.com",
+        "address": "654 Walnut Road, Anyside, WA, 65432"
+      }
+]
