@@ -5,6 +5,7 @@
     align-items: center;
     text-align: center;
   }
+  
 .icons {
     display: flex;
     justify-content: space-between;
@@ -14,6 +15,18 @@
 .icons img {
     width: 50px; /* Adjust size as needed */
     cursor: pointer; /* If the icons are interactive */
+}
+
+.back {
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width:7%;
+
+    align-self: flex-end;
+    justify-self: flex-end;
 }
 
 .Options{

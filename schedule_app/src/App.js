@@ -7,6 +7,7 @@ import contactsData from '../src/data/contacts.json'; // Your contacts data
 function App() {
   const [addingContact, setAddingContact] = useState(false);
   const [selectedContact, setSelectedContact] = useState(false);
+  
 
   const handleAddContact = () => {
     setAddingContact(true);
@@ -19,17 +20,22 @@ function App() {
   const saveContact = (contact) => {
     // Logic to save the contact...
     console.log(contact);
-    setAddingContact(false);
+    setAddingContact(true);
   };
+
+  const handleCancel = () => {
+    setAddingContact(false);
+    setSelectedContact(false);
+  }
 
   return (
     <div className="App">
-      {addingContact ? (
-        <AddContact onSave={saveContact} contactsData={contactsData} />
+      { addingContact ? (
+        <AddContact onSave={saveContact} contactsData={contactsData} onCancel={handleCancel} />
       ) : selectedContact ? (
-        <ContactDetails contact={selectedContact} />
+        <ContactDetails contact={selectedContact} onCancel={handleCancel} />
       ) : (
-        <MainScreen onAddContact={handleAddContact} onContactClick={handleContactClick} />
+        <MainScreen onAddContact={handleAddContact} onContactClick={handleContactClick} onCancel={handleCancel} />
       )}
     </div>
   );

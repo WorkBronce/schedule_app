@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import landLayerLocationIcon from '../images/land-layer-location.png';
-import checkListIcon from '../images/check-list.png';
+import userImage from '../images/user.png';
 import '../components/AddContact.css';
+import crossIcon from '../images/cross.png';
 
 
-const AddContact = ({ onSave, contactsData }) => {
+const AddContact = ({ onSave, contactsData,onCancel }) => {
         const [contact, setContact] = useState({
         name: '',
         surname: '',
@@ -55,7 +55,13 @@ const AddContact = ({ onSave, contactsData }) => {
     };
 
     return (
+        
         <div className="add-contact-form">
+              <button className='backbutton' onClick={onCancel}>
+                <img src={crossIcon} className='back' alt={contact.image} />
+            </button>
+            <h2> New Contact</h2>
+            <img src={userImage} alt={contact.name} className="contact-image" />
             <input
                 type="text"
                 name="name"
@@ -100,10 +106,6 @@ const AddContact = ({ onSave, contactsData }) => {
                 value={contact.address}
                 onChange={handleChange}
             />
-            <div className="icons">
-                <img src={landLayerLocationIcon} alt="Location Icon" />
-                <img src={checkListIcon} alt="Checklist Icon" />
-            </div>
             {error && <p style={{ color: 'red' }}>{error}</p>}
             <button className='AddContact' onClick={handleSave}>Save Contact</button>
         </div>
