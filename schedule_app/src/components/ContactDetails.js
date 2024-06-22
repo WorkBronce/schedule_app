@@ -5,7 +5,7 @@ import checkListIcon from '../images/check-list.png';
 import userImage from '../images/user.png';
 import crossIcon from '../images/cross.png';
 
-function ContactDetails({ contact , onCancel}) {
+function ContactDetails({ contactData ,contact , onCancel}) {
     const [editing, setEditing] = useState(false);
     const [editedContact, setEditedContact] = useState(contact);
 
@@ -19,9 +19,8 @@ function ContactDetails({ contact , onCancel}) {
 
     const handleSave = () => {
         // Update JSON data stored in local storage
-        const contacts = JSON.parse(localStorage.getItem('contacts')) ;
-        console.log(contacts);
-        const updatedContacts = contacts.map((c) => {
+  
+        const updatedContacts = contactData.map((c) => {
             if (c.id === editedContact.id) {
                 return editedContact;
             }
@@ -30,13 +29,39 @@ function ContactDetails({ contact , onCancel}) {
         localStorage.setItem('contacts', JSON.stringify(updatedContacts));
         /*Reset contact list with updated contact */
         /**show contacts in console */
-        console.log(updatedContacts);
-
-
+        contactData = updatedContacts;
+        /** Update current contact */
+        UpdateContact(editedContact);
         
         setEditing(false);
     };
-    
+
+    const UpdateContact = (editedcontact) => {
+        
+        /* Change only if the values are different */
+        if (contact.name !== editedcontact.name) {
+            contact.name = editedcontact.name;
+        }
+        if (contact.surname !== editedcontact.surname) {
+            contact.surname = editedcontact.surname;
+        }
+        if (contact.relationship !== editedcontact.relationship) {
+            contact.relationship = editedcontact.relationship;
+        }
+        if (contact.phone !== editedcontact.phone) {
+            contact.phone = editedcontact.phone;
+        }
+        if (contact.email !== editedcontact.email) {
+            contact.email = editedcontact.email;
+        }
+        if (contact.address !== editedcontact.address) {
+            contact.address = editedcontact.address;
+        }
+        if (contact.image !== editedcontact.image) {
+            contact.image = editedcontact.image;
+        }
+
+    }
 
 
     return (
@@ -56,6 +81,7 @@ function ContactDetails({ contact , onCancel}) {
                     <input type="text" name="address" value={editedContact.address} onChange={handleChange} />
                 </>
             ) : (
+                /** */
                 <>
                     <p>Name: {contact.name}</p>
                     <p>Surname: {contact.surname}</p>

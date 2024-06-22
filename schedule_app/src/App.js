@@ -36,7 +36,7 @@ function App() {
       { addingContact ? (
         <AddContact onSave={saveContact} contactsData={contactsData} onCancel={handleCancel} />
       ) : selectedContact ? (
-        <ContactDetails contact={selectedContact} onCancel={handleCancel} />
+        <ContactDetails contactData={contactsData} contact={selectedContact} onCancel={handleCancel} />
       ) : (
         <MainScreen onAddContact={handleAddContact} onContactClick={handleContactClick} onCancel={handleCancel} />
       )}
