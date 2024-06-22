@@ -7,9 +7,11 @@ import contactsData from '../src/data/contacts.json'; // Your contacts data
 function App() {
   const [addingContact, setAddingContact] = useState(false);
   const [selectedContact, setSelectedContact] = useState(false);
+
   
 
   const handleAddContact = () => {
+
     setAddingContact(true);
   };
 
@@ -18,8 +20,9 @@ function App() {
   };
 
   const saveContact = (contact) => {
-    // Logic to save the contact...
+   
     console.log(contact);
+    contactsData.push(contact);
     setAddingContact(true);
   };
 

@@ -6,6 +6,7 @@ import crossIcon from '../images/cross.png';
 
 const AddContact = ({ onSave, contactsData,onCancel }) => {
         const [contact, setContact] = useState({
+        id:contactsData.length + 1,
         name: '',
         surname: '',
         relationship: '',
@@ -39,18 +40,20 @@ const AddContact = ({ onSave, contactsData,onCancel }) => {
         }
 
         // Check if the contact with the same name or phone number already exists
-        console.log(contactsData[0].name);
+
         const exists = contactsData.some(c => 
             c.name.toLowerCase() === contact.name.toLowerCase() && 
             c.phone === contact.phone
         );
-
+        
         if (exists) {
             setError('A contact with the same name and phone number already exists.');
             return;
         }
-
+        
         onSave(contact);
+
+        console.log(contactsData.length);
         setError(''); // Clear any previous errors if the save is successful
     };
 

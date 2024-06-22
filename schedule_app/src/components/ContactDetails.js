@@ -19,7 +19,8 @@ function ContactDetails({ contact , onCancel}) {
 
     const handleSave = () => {
         // Update JSON data stored in local storage
-        const contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+        const contacts = JSON.parse(localStorage.getItem('contacts')) ;
+        console.log(contacts);
         const updatedContacts = contacts.map((c) => {
             if (c.id === editedContact.id) {
                 return editedContact;
@@ -27,9 +28,15 @@ function ContactDetails({ contact , onCancel}) {
             return c;
         });
         localStorage.setItem('contacts', JSON.stringify(updatedContacts));
+        /*Reset contact list with updated contact */
+        /**show contacts in console */
+        console.log(updatedContacts);
+
+
         
         setEditing(false);
     };
+    
 
 
     return (
