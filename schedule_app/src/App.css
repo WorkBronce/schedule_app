@@ -3,38 +3,8 @@ body {
   background-color: var(--light-gray);
 }
 
-.icon {
-  width: 32px;
-  height: 32px;
-}
 
-.container {
-  display: flex;
-  flex-direction: column; /* Cambio de horizontal a vertical */
-  height: 100vh;
-  align-items: center; /* Centrar elementos horizontalmente */
-  justify-content: flex-start; /* Alinea los elementos desde el comienzo verticalmente */
-}
 
-.top-bar {
-  width: 100%; /* Toma todo el ancho posible */
-  display: flex;
-  justify-content: center; /* Centra los botones en la barra superior */
-  padding: 10px 0; /* Espaciado vertical sin afectar horizontal */
-}
-
-.content {
-  display: flex;
-  width: 100%; /* Ocupa todo el ancho disponible */
-  height: calc(100% - 60px); /* Ajusta el alto considerando el de la barra superior */
-}
-
-.alphabet-navigator {
-  width: fit-content; /* Ancho fijo para el navegador alfabético */
-  height: 100%; /* Ocupa todo el alto disponible del contenedor de contenido */
-  overflow: auto; /* Agrega scroll si el contenido excede el alto */
-  text-size-adjust: calc(100% - 10px); /* Ajusta el tamaño del texto */
-}
 
 
 

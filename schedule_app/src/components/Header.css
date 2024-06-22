@@ -22,6 +22,7 @@
     color: var(--darkest-gray);
     padding: 5px 10px; /* Consistencia en el padding */
     border-radius: 5px; /* Bordes redondeados para input */
+    max-width: 100px; /* Ancho máximo para evitar que se expanda demasiado */
   }
 
   

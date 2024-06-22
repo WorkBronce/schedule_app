@@ -18,8 +18,8 @@ body {
   
   .top-bar {
     width: 100%; /* Toma todo el ancho posible */
-    display: flex;
     justify-content: center; /* Centra los botones en la barra superior */
+    display: flex;
     padding: 10px 0; /* Espaciado vertical sin afectar horizontal */
   }
   
@@ -29,12 +29,107 @@ body {
     height: calc(100% - 60px); /* Ajusta el alto considerando el de la barra superior */
   }
   
-  .alphabet-navigator {
-    width: fit-content; /* Ancho fijo para el navegador alfabético */
-    height: 100%; /* Ocupa todo el alto disponible del contenedor de contenido */
-    overflow: auto; /* Agrega scroll si el contenido excede el alto */
-    text-size-adjust: calc(100% - 10px); /* Ajusta el tamaño del texto */
+ .Header-body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
   }
+  
+  .Header {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    background-color: var(--dark-gray);
+    color: var(--lightest-gray);
+  }
+  
+  .Header-title {
+    font-size: 1.5em;
+  }
+  
+  .Header-button {
+    background-color: var(--dark-gray);
+    color: var(--lightest-gray);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .Header-button:hover {
+    background-color: var(--medium-gray);
+  }
+  
+  .Header-button:active {
+    background-color: var(--light-gray);
+  }
+  
+  .Header-button:focus {
+    outline: none;
+  }
+  
+  .Main {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 60px);
+  }
+  
+  .Main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  
+  .Main-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .Main-button {
+    background-color: var(--dark-gray);
+    color: var(--lightest-gray);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .Main-button:hover {
+    background-color: var(--medium-gray);
+  }
+  
+  .Main-button:active {
+    background-color: var(--light-gray);
+  }
+  
+  .Main-button:focus {
+    outline: none;
+  }
+  
+  .Main-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  
+  .Main-item {
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+ }
   
   
   

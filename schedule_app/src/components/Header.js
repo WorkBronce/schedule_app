@@ -16,7 +16,7 @@ function Header({ onAddClick }) {
                 <button className="button-74" onClick={onAddClick}>
                     <img  src={userAddIcon} alt="Añadir Usuario"  style={{ marginTop: '20px' , minHeight: '24px', minWidth:'24px'}} />
                 </button>
-            {searchActive && <input  className= "button-74" type="text" placeholder="Buscar contacto..." autoFocus />}
+            {searchActive && <input  className= "button-74" type="text" placeholder="Search" autoFocus />}
             <button className="button-74" onClick={handleSearchClick}>  
                 <img src={searchIcon} alt="Buscar" style={{ marginTop: '20px' , minHeight: '24px', minWidth:'24px'}} />
             </button>

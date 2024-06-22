@@ -7,7 +7,7 @@
     padding: 10px 0; /* Espacio vertical sin afectar el espacio horizontal */
     flex-grow: 1;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: down;
   }
   .contact-item {
     width: 100%; /* Ajusta según necesidades */
