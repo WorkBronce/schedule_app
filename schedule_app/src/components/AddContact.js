@@ -4,7 +4,7 @@ import '../components/AddContact.css';
 import crossIcon from '../images/cross.png';
 
 
-const AddContact = ({ onSave, contactsData,onCancel }) => {
+const AddContact = ({ onSave, contactsData, onCancel }) => {
         const [contact, setContact] = useState({
         id:contactsData.length + 1,
         name: '',

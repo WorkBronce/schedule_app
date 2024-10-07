@@ -5,9 +5,10 @@ import checkListIcon from '../images/check-list.png';
 import userImage from '../images/user.png';
 import crossIcon from '../images/cross.png';
 
-function ContactDetails({ contactData ,contact , onCancel}) {
+function ContactDetails({ contactData ,contact , onCancel ,onShowMaps, onShowTodoList }) {
     const [editing, setEditing] = useState(false);
     const [editedContact, setEditedContact] = useState(contact);
+
 
     const handleEdit = () => {
         setEditing(true);
@@ -16,6 +17,7 @@ function ContactDetails({ contactData ,contact , onCancel}) {
     const handleChange = (e) => {
         setEditedContact({ ...editedContact, [e.target.name]: e.target.value });
     };
+
 
     const handleSave = () => {
         // Update JSON data stored in local storage
@@ -66,7 +68,7 @@ function ContactDetails({ contactData ,contact , onCancel}) {
 
     return (
         <div className="contact-details">
-            <button className='backbutton' onClick={onCancel}>
+            <button className='backbutton' onClick={ onCancel }>
                 <img src={crossIcon} className='back' alt={contact.image} />
             </button>
             <h2>Contact Details</h2>
@@ -92,11 +94,11 @@ function ContactDetails({ contactData ,contact , onCancel}) {
                 </>
             )}
             <div className="icons">
-                <button className="Options" onClick={() => console.log('Navigate to maps')}>
+                <button className="Options" id='Maps' onClick={ onShowMaps }>
                     <img src={landLayerLocationIcon} alt="Location Icon" />
                     Maps
                 </button>
-                <button className="Options" onClick={() => console.log('Navigate to Todo List')}>
+                <button className="Options" id='TodoList' onClick={ onShowTodoList }>
                     <img src={checkListIcon} alt="Checklist Icon" />
                     <span>Todo-List</span>
                 </button>

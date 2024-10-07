@@ -1,0 +1,13 @@
+.Google-map {
+    width: 80%;
+    height: 50%;
+    border-radius: 8px;
+}
+
+#map {
+    width: 80%;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10%;
+}
